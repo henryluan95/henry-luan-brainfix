@@ -1,12 +1,15 @@
 import React from "react";
 import "./Button.scss";
-import uploadIcon from "../../assets/Icons/upload.svg";
 
 class Button extends React.Component {
   render() {
     return (
-      <button className={`button ${this.props.class}`}>
-        <img className="button__icon" src={uploadIcon} alt="upload Icon" />
+      <button className={`button ${this.props.modifier}`}>
+        <img
+          className="button__icon"
+          src={this.props.icon}
+          alt={`${this.props.text} icon`}
+        />
         {this.props.text.toUpperCase()}
       </button>
     );

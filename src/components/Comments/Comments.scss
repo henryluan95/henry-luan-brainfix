@@ -1,0 +1,53 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixin" as *;
+
+.comment {
+  padding: $padding-regular-mobile;
+  padding-top: 0;
+
+  &__title {
+    margin-bottom: $padding-regular-mobile;
+    @include small-screen-subheader;
+  }
+
+  &__avatar {
+    margin-right: $padding-regular-mobile;
+  }
+
+  &__input-section {
+    @include flex-layout(row, center, center);
+  }
+
+  &__avatar {
+    max-width: 2.25rem;
+    height: 2.25rem;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  label {
+    @include small-screen-labels-button;
+    color: $color-primary-silver;
+  }
+
+  textarea {
+    height: 2.25rem;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-top: 4px;
+    border: 1px solid $color-secondary-mercury;
+    font-family: inherit;
+    min-height: 6rem;
+    resize: none;
+
+    &::placeholder {
+      color: $color-primary-black;
+    }
+
+    &:focus {
+      border: 1px solid $color-primary-black;
+    }
+  }
+}

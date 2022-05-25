@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import Button from "../Button/Button";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import brainFixLogo from "../../assets/Logo/BrainFlix-logo.svg";
+import uploadIcon from "../../assets/Icons/upload.svg";
 
 class Navbar extends React.Component {
   render() {
@@ -16,7 +17,7 @@ class Navbar extends React.Component {
             <label>
               <input className="nav__search" type="text" placeholder="Search" />
             </label>
-            <Button text="Upload" class="nav__button" />
+            <Button text="Upload" modifier="nav__button" icon={uploadIcon} />
             <img
               src={profileImage}
               className="nav__profile-picture"
