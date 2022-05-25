@@ -4,12 +4,19 @@
 .nav {
   padding: $padding-regular-mobile;
   @include flex-layout(column, center, center);
+  @include tablet {
+    @include flex-layout(row, space-between, center);
+    padding: $padding-regular-mobile $padding-regular-tablet-desk;
+  }
 
   &__logo {
     max-width: 7.5rem;
     margin-bottom: $padding-regular-mobile;
     display: inline-block;
     width: 7.5rem;
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__logo-image {
@@ -38,11 +45,20 @@
     &::placeholder {
       color: $color-primary-black;
     }
+
+    @include tablet {
+      order: 1;
+    }
   }
 
   &__button {
     order: 3;
     margin-top: $padding-regular-mobile;
+    @include tablet {
+      order: 2;
+      margin-top: 0;
+      margin: 0 $padding-regular-mobile;
+    }
   }
 
   &__profile-picture {
@@ -56,6 +72,7 @@
     @include tablet {
       max-width: 2.55rem;
       height: 2.5rem;
+      order: 3;
     }
   }
 }
