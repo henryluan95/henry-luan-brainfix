@@ -1,0 +1,16 @@
+.hero {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-height: 10.625rem;
+  overflow: hidden;
+  max-width: 20rem;
+  margin: 0 auto;
+
+  &__video {
+    width: 100%;
+    display: block;
+    object-position: center;
+    object-fit: fill;
+  }
+}
