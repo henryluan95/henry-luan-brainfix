@@ -1,0 +1,6 @@
+@use "../../styles/variables" as *;
+
+.description {
+  padding: $padding-before-headline-mobile $padding-regular-mobile
+    $padding-regular-mobile $padding-regular-mobile;
+}

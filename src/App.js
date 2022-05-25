@@ -13,7 +13,7 @@ function App() {
         <Hero />
         <Info />
       </main>
-      <section></section>
+      <div className="test-block"></div>
     </>
   );
 }
