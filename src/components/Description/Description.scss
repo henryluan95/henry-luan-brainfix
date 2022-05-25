@@ -1,6 +1,56 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixin" as *;
 
 .description {
   padding: $padding-before-headline-mobile $padding-regular-mobile
     $padding-regular-mobile $padding-regular-mobile;
+  @include small-screen-body-copy;
+
+  &__title {
+    @include small-screen-page-header;
+  }
+
+  .highlight {
+    margin: $padding-regular-mobile 0;
+    padding: $padding-regular-mobile 0;
+    border-top: 1px solid $color-primary-silver;
+    border-bottom: 1px solid $color-primary-silver;
+    @include flex-layout(row, center, center);
+    flex-wrap: wrap;
+    color: $color-primary-silver;
+
+    &__artist {
+      flex: 50%;
+      font-weight: 700;
+      color: $color-primary-black;
+    }
+
+    &__views {
+      flex: 50%;
+      @include flex-layout(row, flex-start, center);
+
+      &-count {
+        margin: 0.1rem 0 0 0.5rem;
+      }
+    }
+
+    &__date {
+      margin-top: $padding-regular-mobile;
+      flex: 50%;
+    }
+
+    &__likes {
+      margin-top: $padding-regular-mobile;
+      flex: 50%;
+      @include flex-layout(row, flex-start, center);
+
+      &-count {
+        margin: 0.1rem 0 0 0.5rem;
+      }
+    }
+
+    &__text {
+      color: $color-primary-black;
+    }
+  }
 }

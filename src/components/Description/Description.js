@@ -11,16 +11,24 @@ class Description extends React.Component {
         <div className="highlight">
           <span className="highlight__artist">By Red Cow</span>
           <div className="highlight__views">
-            <img src={viewsIcon} alt="views icon" />
-            <span>1,001,023</span>
+            <img
+              className="highlight__views-icon"
+              src={viewsIcon}
+              alt="views icon"
+            />
+            <span className="highlight__views-count">1,001,023</span>
           </div>
           <span className="highlight__date">07/11/2021</span>
           <div className="highlight__likes">
-            <img src={likesIcon} alt="likes icon" />
-            <span>110,985</span>
+            <img
+              className="highlight__likes-icon"
+              src={likesIcon}
+              alt="likes icon"
+            />
+            <span className="highlight__likes-count">110,985</span>
           </div>
         </div>
-        <p>
+        <p className="highlight__text">
           On a gusty day in Southern Utah, a group of 25 daring mountain bikers
           blew the doors off what is possible on two wheels, unleashing some of
           the biggest moments the sport has ever seen. While mother nature only
