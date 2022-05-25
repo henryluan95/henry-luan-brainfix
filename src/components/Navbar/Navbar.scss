@@ -1,0 +1,24 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/global";
+
+.nav {
+  &__profile-picture {
+    max-width: 2.25rem;
+    height: 2.25rem;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+
+    @include tablet {
+      max-width: 2.55rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__search {
+    background: url(../../assets/Icons/search.svg) no-repeat left;
+    background-position: 0.5rem center;
+    padding-left: 2rem;
+    background-size: 1rem;
+  }
+}
