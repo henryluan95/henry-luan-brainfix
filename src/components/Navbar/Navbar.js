@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import image from "../../assets/Images/Mohan-muruge.jpg";
+import Button from "../Button/Button";
 
 class Navbar extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class Navbar extends React.Component {
             <label>
               <input className="nav__search" type="text" placeholder="search" />
             </label>
-            <button> UPLOAD</button>
+            <Button text="Upload" />
             <img
               src={image}
               className="nav__profile-picture"

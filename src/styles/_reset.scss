@@ -1,5 +1,5 @@
-@use "../partials/typography" as *;
-@use "../partials/variables" as *;
+@use "../styles/typography" as *;
+@use "../styles/variables" as *;
 
 html {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Avenir Next";
-  color: $color-white;
+  color: $color-primary-white;
 }
 
 h1,
