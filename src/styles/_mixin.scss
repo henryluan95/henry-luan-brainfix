@@ -29,3 +29,57 @@
     @content;
   }
 }
+
+//mixin font for mobile
+@mixin small-screen-page-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@mixin small-screen-section-header {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+@mixin small-screen-subheader {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+@mixin small-screen-body-copy {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@mixin small-screen-labels-button {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+//font mixins for tablet and desktop
+@mixin large-screen-page-header {
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+}
+@mixin large-screen-section-header {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+@mixin large-screen-subheader {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+@mixin large-screen-body-copy {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+@mixin large-screen-labels-button {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
