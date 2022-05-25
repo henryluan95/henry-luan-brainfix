@@ -9,6 +9,7 @@ class Hero extends React.Component {
           className="hero__video"
           poster="https://i.imgur.com/l2Xfgpl.jpg"
           src="https://project-2-api.herokuapp.com/stream"
+          controls
         ></video>
       </div>
     );
