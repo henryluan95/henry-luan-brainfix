@@ -8,6 +8,11 @@
     @include flex-layout(row, space-between, center);
     padding: $padding-regular-mobile $padding-regular-tablet-desk;
   }
+  @include desktop {
+    padding: $padding-regular-mobile 5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
 
   &__logo {
     max-width: 7.5rem;
@@ -57,7 +62,7 @@
     @include tablet {
       order: 2;
       margin-top: 0;
-      margin: 0 $padding-regular-mobile;
+      margin: 0 $padding-regular-tablet-desk;
     }
   }
 
