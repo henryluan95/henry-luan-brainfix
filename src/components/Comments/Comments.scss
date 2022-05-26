@@ -4,18 +4,11 @@
 .comment {
   padding: $padding-regular-mobile;
   padding-top: 0;
+  @include small-screen-body-copy;
 
   &__title {
     margin-bottom: $padding-regular-mobile;
     @include small-screen-subheader;
-  }
-
-  &__avatar {
-    margin-right: $padding-regular-mobile;
-  }
-
-  &__input-section {
-    @include flex-layout(row, center, center);
   }
 
   &__avatar {
@@ -24,6 +17,59 @@
     overflow: hidden;
     object-fit: cover;
     border-radius: 50%;
+    align-self: flex-start;
+    margin: 1.2rem $padding-regular-mobile 0 0;
+  }
+
+  &__input-section {
+    @include flex-layout(row, center, center);
+    border-bottom: 1px solid $color-secondary-mercury;
+    padding-bottom: 1rem;
+  }
+
+  .form {
+    width: 100%;
+
+    &__container {
+      @include flex-layout(column, center, space-between);
+    }
+  }
+
+  .card {
+    @include flex-layout(row, flex-start, flex-start);
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-secondary-mercury;
+
+    &__avatar {
+      min-width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      background-color: $color-secondary-mercury;
+    }
+
+    &__detail {
+      margin-left: 1rem;
+      width: 100%;
+      @include flex-layout(column, center);
+    }
+
+    &__header {
+      @include flex-layout(row, space-between);
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+
+    &__author {
+      font-weight: 700;
+    }
+
+    &__date {
+      color: $color-secondary-mercury;
+    }
+
+    &__delete-button {
+      margin-top: 1rem;
+    }
   }
 
   label {
@@ -36,11 +82,11 @@
     width: 100%;
     border-radius: 4px;
     padding: 0.75rem;
-    margin-top: 4px;
     border: 1px solid $color-secondary-mercury;
     font-family: inherit;
     min-height: 6rem;
     resize: none;
+    margin-bottom: $padding-regular-mobile;
 
     &::placeholder {
       color: $color-primary-black;
