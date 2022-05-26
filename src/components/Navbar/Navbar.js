@@ -17,11 +17,7 @@ class Navbar extends React.Component {
             <label>
               <input className="nav__search" type="text" placeholder="Search" />
             </label>
-            <Button
-              text="Upload"
-              identifierClass="nav__button"
-              icon={uploadIcon}
-            />
+            <Button text="Upload" className="nav__button" icon={uploadIcon} />
             <img
               src={profileImage}
               className="nav__profile-picture"

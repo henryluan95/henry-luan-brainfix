@@ -4,7 +4,7 @@ import "./Button.scss";
 class Button extends React.Component {
   render() {
     return (
-      <button className={`button ${this.props.identifierClass}`}>
+      <button className={`button ${this.props.className}`}>
         <img
           className="button__icon"
           src={this.props.icon}

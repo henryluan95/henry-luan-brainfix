@@ -28,7 +28,7 @@ class Comments extends React.Component {
               </div>
               <Button
                 text="Comment"
-                identifierClass="comment__button"
+                className="comment__button"
                 icon={commentIcon}
               />
             </form>
