@@ -1,0 +1,33 @@
+@use "../../styles/mixin" as *;
+@use "../../styles/variables" as *;
+
+.recommendation {
+  padding: $padding-regular-mobile;
+  padding-top: 0;
+  @include small-screen-body-copy;
+
+  &__videos {
+    @include flex-layout(column, center, center);
+  }
+
+  &__video {
+    @include flex-layout(row, space-between, stretch);
+    margin-top: $padding-regular-mobile;
+    height: 3.8rem;
+
+    &-thumbnail {
+      max-width: 6rem;
+      border-radius: 4px;
+      margin-right: $padding-regular-mobile;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .info {
+    @include flex-layout(column, space-between, flex-start);
+    &__title {
+      font-weight: 700;
+    }
+  }
+}
