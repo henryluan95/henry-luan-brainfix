@@ -5,6 +5,10 @@
   padding-top: 0;
   @include small-screen-body-copy;
 
+  @include desktop {
+    padding-top: $padding-before-headline-tablet-desk;
+  }
+
   &__videos {
     @include flex-layout(column, center, flex-start);
     max-width: 17rem;

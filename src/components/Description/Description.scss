@@ -5,6 +5,10 @@
   padding-top: $padding-before-headline-mobile;
   @include small-screen-body-copy;
 
+  @include desktop {
+    padding-top: $padding-before-headline-tablet-desk;
+  }
+
   &__title {
     @include small-screen-page-header;
   }

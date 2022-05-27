@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixin" as *;
 
 .hero {
   display: flex;
@@ -16,5 +17,8 @@
     display: block;
     object-position: center;
     object-fit: fill;
+    @include desktop {
+      max-width: 60rem;
+    }
   }
 }

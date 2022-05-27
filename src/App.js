@@ -35,11 +35,13 @@ class App extends Component {
         </header>
         <main>
           <Hero selectedMovie={this.state.selectedMovie} />
-          <Info selectedMovie={this.state.selectedMovie} />
-          <Recommendation
-            movieList={this.UnselectedMovieList()}
-            changeVideo={this.changeVideo}
-          />
+          <div className="main-content">
+            <Info selectedMovie={this.state.selectedMovie} />
+            <Recommendation
+              movieList={this.UnselectedMovieList()}
+              changeVideo={this.changeVideo}
+            />
+          </div>
         </main>
       </>
     );
