@@ -8,7 +8,7 @@ function Comments({ selectedMovie }) {
   const { comments } = selectedMovie;
 
   return (
-    <section className="comment">
+    <section className="comment section">
       <h4 className="comment__title">{comments.length} Comments</h4>
       <div className="comment__content">
         {/*input section */}

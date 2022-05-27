@@ -2,7 +2,6 @@
 @use "../../styles/mixin" as *;
 
 .comment {
-  padding: $padding-regular-mobile;
   padding-top: 0;
   @include small-screen-body-copy;
 
