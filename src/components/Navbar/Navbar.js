@@ -12,7 +12,7 @@ function Navbar() {
           <img className="nav__logo-image" src={brainFixLogo} alt="" />
         </a>
         <div className="nav__items">
-          <label>
+          <label className="nav__input-label">
             <input className="nav__search" type="text" placeholder="Search" />
           </label>
           <Button text="Upload" className="nav__button" icon={uploadIcon} />

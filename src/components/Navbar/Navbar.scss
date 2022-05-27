@@ -32,6 +32,15 @@
   &__items {
     @include flex-layout(row, space-between, center);
     flex-wrap: wrap;
+    width: 100%;
+    @include tablet {
+      width: auto;
+      max-width: 80rem;
+    }
+  }
+
+  &__input-label {
+    flex: 1;
   }
 
   &__search {
@@ -69,6 +78,7 @@
   &__profile-picture {
     max-width: 2.25rem;
     height: 2.25rem;
+    margin-left: $padding-regular-mobile;
     overflow: hidden;
     object-fit: cover;
     border-radius: 50%;
