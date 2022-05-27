@@ -2,7 +2,6 @@
 @use "../../styles/variables" as *;
 
 .nav {
-  padding: $padding-regular-mobile;
   @include flex-layout(column, center, center);
   @include tablet {
     @include flex-layout(row, space-between, center);

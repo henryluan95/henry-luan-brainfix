@@ -1,0 +1,9 @@
+@use "./variables" as *;
+@use "./mixin" as *;
+
+.section {
+  padding: $padding-regular-mobile;
+  @include tablet {
+    padding: $padding-regular-tablet-desk;
+  }
+}

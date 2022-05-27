@@ -7,7 +7,7 @@ import uploadIcon from "../../assets/Icons/upload.svg";
 function Navbar() {
   return (
     <nav>
-      <div className="nav">
+      <div className="nav section">
         <a href="/" className="nav__logo">
           <img className="nav__logo-image" src={brainFixLogo} alt="" />
         </a>
