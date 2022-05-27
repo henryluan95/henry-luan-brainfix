@@ -3,7 +3,7 @@ import "./Recommendation.scss";
 
 function Recommendation({ movieList, changeVideo }) {
   return (
-    <section className="recommendation">
+    <section className="recommendation section">
       <h4 className="recommendation__title">NEXT VIDEOS</h4>
       <div className="recommendation__videos">
         {movieList.map((movie) => {

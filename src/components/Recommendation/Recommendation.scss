@@ -2,12 +2,12 @@
 @use "../../styles/variables" as *;
 
 .recommendation {
-  padding: $padding-regular-mobile;
   padding-top: 0;
   @include small-screen-body-copy;
 
   &__videos {
-    @include flex-layout(column, center, center);
+    @include flex-layout(column, center, flex-start);
+    max-width: 17rem;
   }
 
   &__video {
