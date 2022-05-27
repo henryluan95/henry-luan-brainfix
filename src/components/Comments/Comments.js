@@ -2,9 +2,10 @@ import "./Comments.scss";
 import Button from "../Button/Button";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
+import { formatTimestampDeepDive } from "../../utils/utilities";
 
 function Comments({ selectedMovie }) {
-  const { comments, id } = selectedMovie;
+  const { comments } = selectedMovie;
 
   return (
     <section className="comment">
@@ -41,7 +42,9 @@ function Comments({ selectedMovie }) {
               <div className="card__detail">
                 <div className="card__header">
                   <p className="card__author">{comment.name}</p>
-                  <p className="card__date">{comment.timestamp}</p>
+                  <p className="card__date">
+                    {formatTimestampDeepDive(comment.timestamp)}
+                  </p>
                 </div>
                 <p className="card__text">{comment.comment}</p>
               </div>

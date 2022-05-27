@@ -1,6 +1,7 @@
 import "./Description.scss";
 import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
+import { formatTimestamp } from "../../utils/utilities";
 
 function Description({ selectedMovie }) {
   return (
@@ -16,7 +17,9 @@ function Description({ selectedMovie }) {
           />
           <span className="highlight__views-count">{selectedMovie.views}</span>
         </div>
-        <span className="highlight__date">{selectedMovie.timestamp}</span>
+        <span className="highlight__date">
+          {formatTimestamp(selectedMovie.timestamp)}
+        </span>
         <div className="highlight__likes">
           <img
             className="highlight__likes-icon"

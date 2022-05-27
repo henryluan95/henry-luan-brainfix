@@ -17,6 +17,8 @@ class App extends Component {
     this.setState({
       selectedMovie: detailedVideoList.find((video) => video.id === videoId),
     });
+
+    window.scroll({ top: 0, behavior: "smooth" });
   };
 
   UnselectedMovieList = () => {
