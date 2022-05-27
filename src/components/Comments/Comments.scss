@@ -5,6 +5,17 @@
   padding-top: 0;
   @include small-screen-body-copy;
 
+  @include desktop {
+    border-right: 1px solid $color-secondary-mercury;
+  }
+
+  &__content {
+    border-bottom: 1px solid $color-secondary-mercury;
+    @include desktop {
+      border: none;
+    }
+  }
+
   &__title {
     margin-bottom: $padding-regular-mobile;
     @include small-screen-subheader;
@@ -22,7 +33,6 @@
 
   &__input-section {
     @include flex-layout(row, center, center);
-    border-bottom: 1px solid $color-secondary-mercury;
     padding-bottom: 1rem;
   }
 
@@ -50,7 +60,11 @@
   .card {
     @include flex-layout(row, flex-start, flex-start);
     padding: 1rem 0;
-    border-bottom: 1px solid $color-secondary-mercury;
+    border-top: 1px solid $color-secondary-mercury;
+
+    @include desktop {
+      margin-right: -2rem;
+    }
 
     &__avatar {
       min-width: 2.25rem;
@@ -77,6 +91,15 @@
 
     &__date {
       color: $color-secondary-mercury;
+      @include desktop {
+        margin-right: 2rem;
+      }
+    }
+
+    &__text {
+      @include desktop {
+        margin-right: 2rem;
+      }
     }
   }
 

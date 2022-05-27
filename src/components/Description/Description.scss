@@ -7,6 +7,7 @@
 
   @include desktop {
     padding-top: $padding-before-headline-tablet-desk;
+    border-right: 1px solid $color-secondary-mercury;
   }
 
   &__title {
@@ -21,6 +22,10 @@
     @include flex-layout(row, center, center);
     flex-wrap: wrap;
     color: $color-primary-silver;
+
+    @include desktop {
+      margin-right: -2rem;
+    }
 
     &__artist {
       flex: 50%;

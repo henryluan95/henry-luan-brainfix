@@ -12,6 +12,9 @@
   &__videos {
     @include flex-layout(column, center, flex-start);
     max-width: 17rem;
+    @include desktop {
+      min-width: 17rem;
+    }
   }
 
   &__video {

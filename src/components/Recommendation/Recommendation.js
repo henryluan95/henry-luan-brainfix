@@ -1,4 +1,3 @@
-import { Component } from "react";
 import "./Recommendation.scss";
 
 function Recommendation({ movieList, changeVideo }) {
@@ -16,7 +15,7 @@ function Recommendation({ movieList, changeVideo }) {
               <img
                 className="recommendation__video-thumbnail"
                 src={movie.image}
-                alt="video thumbnail"
+                alt={`Video of ${movie.title}`}
               />
               <div className="recommendation__video-info info">
                 <p className="info__title">{movie.title}</p>

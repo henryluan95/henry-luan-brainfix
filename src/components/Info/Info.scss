@@ -1,4 +1,11 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixin" as *;
+
 .info {
   display: flex;
   flex-direction: column;
+
+  @include desktop {
+    overflow: hidden;
+  }
 }
