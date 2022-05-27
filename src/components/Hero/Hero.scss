@@ -1,11 +1,13 @@
+@use "../../styles/variables" as *;
+
 .hero {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  max-height: 10.625rem;
   overflow: hidden;
   max-width: 20rem;
   margin: 0 auto;
+  background-color: $color-primary-black;
 
   &__video {
     width: 100%;
