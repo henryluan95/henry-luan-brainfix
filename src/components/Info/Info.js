@@ -4,10 +4,10 @@ import Comments from "../Comments/Comments";
 
 function Info({ selectedMovie }) {
   return (
-    <section className="info">
+    <div className="info">
       <Description selectedMovie={selectedMovie} />
       <Comments selectedMovie={selectedMovie} />
-    </section>
+    </div>
   );
 }
 

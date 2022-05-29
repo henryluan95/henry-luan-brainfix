@@ -16,9 +16,9 @@
 
   &__videos {
     @include flex-layout(column, center, flex-start);
-    max-width: 17rem;
+    width: 100%;
     @include desktop {
-      min-width: 17rem;
+      min-width: 18rem;
     }
   }
 
@@ -39,6 +39,10 @@
 
   .info {
     @include flex-layout(column, space-between, flex-start);
+    max-width: 9rem;
+    @include tablet {
+      max-width: 10rem;
+    }
 
     &__title {
       font-weight: 700;
