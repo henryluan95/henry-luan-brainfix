@@ -3,7 +3,7 @@ import "./Hero.scss";
 
 function Hero({ selectedMovie }) {
   return (
-    <div className="hero section">
+    <div className="hero">
       <video
         className="hero__video"
         poster={selectedMovie.image}

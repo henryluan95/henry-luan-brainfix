@@ -24,18 +24,31 @@
     color: $color-primary-silver;
 
     @include desktop {
-      margin-right: -2rem;
+      justify-content: flex-start;
+      border-top: none;
+      padding-bottom: 0.4rem;
+      margin: 0 -2rem $padding-regular-tablet-desk 0;
     }
 
     &__artist {
       flex: 50%;
       font-weight: 700;
       color: $color-primary-black;
+      @include desktop {
+        flex: none;
+        order: 1;
+        margin-right: $padding-regular-tablet-desk;
+      }
     }
 
     &__views {
       flex: 50%;
       @include flex-layout(row, flex-start, center);
+      @include desktop {
+        flex: none;
+        order: 3;
+        margin-left: auto;
+      }
 
       &-count {
         margin: 0.1rem 0 0 0.5rem;
@@ -45,12 +58,22 @@
     &__date {
       margin-top: $padding-regular-mobile;
       flex: 50%;
+      @include desktop {
+        margin-top: 0;
+        flex: none;
+        order: 2;
+      }
     }
 
     &__likes {
       margin-top: $padding-regular-mobile;
       flex: 50%;
       @include flex-layout(row, flex-start, center);
+      @include desktop {
+        flex: none;
+        order: 4;
+        margin: 0 2rem 0 $padding-regular-tablet-desk;
+      }
 
       &-count {
         margin: 0.1rem 0 0 0.5rem;
