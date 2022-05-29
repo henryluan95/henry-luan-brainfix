@@ -21,6 +21,7 @@ class App extends Component {
     window.scroll({ top: 0, behavior: "smooth" });
   };
 
+  //Create method to filter in all unselected videos
   UnselectedMovieList = () => {
     return videoList.filter(
       (video) => video.id !== this.state.selectedMovie.id
