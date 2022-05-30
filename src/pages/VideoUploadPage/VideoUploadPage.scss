@@ -6,6 +6,12 @@
   padding-top: 0;
   overflow: hidden;
   @include small-screen-body-copy;
+  @include desktop {
+    padding: 0 6.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    overflow: revert;
+  }
 
   &__title {
     padding-top: $padding-before-headline-mobile;
