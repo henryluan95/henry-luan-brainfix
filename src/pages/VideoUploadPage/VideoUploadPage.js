@@ -4,7 +4,7 @@ import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import Button from "../../components/Button/Button";
 import publishIcon from "../../assets/Icons/publish.svg";
 
-export const VideoUploadPage = () => {
+const VideoUploadPage = () => {
   return (
     <main className="upload section">
       <h1 className="upload__title">Upload Video</h1>
@@ -42,3 +42,5 @@ export const VideoUploadPage = () => {
     </main>
   );
 };
+
+export default VideoUploadPage;
