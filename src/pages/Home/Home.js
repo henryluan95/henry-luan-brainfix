@@ -12,6 +12,7 @@ class Home extends Component {
     detailedVideoList,
   };
 
+  //Create a method to change video
   changeVideo = (videoId) => {
     this.setState({
       selectedMovie: detailedVideoList.find((video) => video.id === videoId),

@@ -2,6 +2,7 @@ import "./App.scss";
 import { Component } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
+import { VideoUploadPage } from "./pages/VideoUploadPage/VideoUploadPage";
 
 class App extends Component {
   render() {
@@ -10,7 +11,8 @@ class App extends Component {
         <header>
           <Navbar />
         </header>
-        <Home />
+        {/* <Home /> */}
+        <VideoUploadPage />
       </>
     );
   }
