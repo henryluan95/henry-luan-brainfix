@@ -1,0 +1,10 @@
+@use "../../styles/mixin" as *;
+
+.main-content {
+  @include desktop {
+    @include flex-layout(row, space-between, flex-start);
+    max-width: 80rem;
+    padding: 0 5rem;
+    margin: 0 auto;
+  }
+}
