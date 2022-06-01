@@ -101,6 +101,13 @@
         margin-right: 2rem;
       }
     }
+
+    &__delete-button {
+      margin: 1rem 0 0 auto;
+      @include desktop {
+        margin-right: 2rem;
+      }
+    }
   }
 
   label {

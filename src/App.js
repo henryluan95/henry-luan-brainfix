@@ -14,7 +14,8 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/video-upload" component={VideoUploadPage} />
+          <Route path="/videos/:videoId" component={Home} />
+          <Route path="/upload" component={VideoUploadPage} />
         </Switch>
       </BrowserRouter>
     );

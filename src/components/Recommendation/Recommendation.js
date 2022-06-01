@@ -1,4 +1,5 @@
 import "./Recommendation.scss";
+import { Link } from "react-router-dom";
 
 function Recommendation({ movieList, changeVideo }) {
   return (
@@ -7,10 +8,11 @@ function Recommendation({ movieList, changeVideo }) {
       <div className="recommendation__videos">
         {movieList.map((movie) => {
           return (
-            <div
+            <Link
               key={movie.id}
               className="recommendation__video"
-              onClick={() => changeVideo(movie.id)}
+              to={`/videos/${movie.id}`}
+              // onClick={() => changeVideo(movie.id)}
             >
               <img
                 className="recommendation__video-thumbnail"
@@ -21,7 +23,7 @@ function Recommendation({ movieList, changeVideo }) {
                 <p className="info__title">{movie.title}</p>
                 <span className="info__artist">{movie.channel}</span>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

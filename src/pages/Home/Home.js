@@ -12,6 +12,18 @@ class Home extends Component {
     detailedVideoList,
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps.match);
+    console.log(this.props.match);
+    // if (prevProps.match.url !== this.props.match.url) {
+    //   this.props.match.params.videoId
+    //     ? this.changeVideo(this.props.match.params.videoId)
+    //     : this.setState({
+    //         selectedMovie: detailedVideoList[0],
+    //       });
+    // }
+  }
+
   //Create a method to change video
   changeVideo = (videoId) => {
     this.setState({

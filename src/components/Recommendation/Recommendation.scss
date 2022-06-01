@@ -26,6 +26,8 @@
     @include flex-layout(row, space-between, stretch);
     margin-top: $padding-regular-mobile;
     height: 3.8rem;
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
 
     &-thumbnail {

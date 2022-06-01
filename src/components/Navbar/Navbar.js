@@ -16,7 +16,7 @@ function Navbar() {
           <label className="nav__search-label">
             <input className="nav__search" type="text" placeholder="Search" />
           </label>
-          <Link to="/video-upload" className="nav__button">
+          <Link to="/upload" className="nav__button">
             <Button
               text="Upload"
               className="nav__button-component"

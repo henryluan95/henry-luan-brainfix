@@ -47,6 +47,7 @@ function Comments({ selectedMovie }) {
                   </p>
                 </div>
                 <p className="card__text">{comment.comment}</p>
+                <Button text="Delete" className="card__delete-button" icon="" />
               </div>
             </div>
           );
