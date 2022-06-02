@@ -20,7 +20,7 @@
     width: 100%;
     display: block;
     object-position: center;
-    object-fit: fill;
+    object-fit: cover;
     aspect-ratio: 16/9;
 
     @include desktop {

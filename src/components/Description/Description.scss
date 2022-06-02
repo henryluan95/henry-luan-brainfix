@@ -17,8 +17,8 @@
   .highlight {
     margin: $padding-regular-mobile 0;
     padding: $padding-regular-mobile 0;
-    border-top: 1px solid $color-primary-silver;
-    border-bottom: 1px solid $color-primary-silver;
+    border-top: 1px solid $color-secondary-mercury;
+    border-bottom: 1px solid $color-secondary-mercury;
     @include flex-layout(row, center, center);
     flex-wrap: wrap;
     color: $color-primary-silver;

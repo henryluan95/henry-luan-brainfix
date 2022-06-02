@@ -1,17 +1,11 @@
 import React from "react";
 import "./Button.scss";
 
-function Button(props) {
+function Button({ className, icon, text }) {
   return (
-    <button className={`button ${props.className}`}>
-      {props.icon && (
-        <img
-          className="button__icon"
-          src={props.icon}
-          alt={`${props.text} icon`}
-        />
-      )}
-      {props.text.toUpperCase()}
+    <button className={`button ${className}`}>
+      {icon && <img className="button__icon" src={icon} alt={`${text} icon`} />}
+      {text.toUpperCase()}
     </button>
   );
 }

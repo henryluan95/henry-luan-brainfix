@@ -41,12 +41,25 @@
     @include tablet {
       padding-top: $padding-regular-tablet-desk;
     }
+    @include desktop {
+      @include flex-layout(row, space-between, center);
+      border-bottom: 1px solid $color-secondary-mercury;
+      padding-bottom: $padding-regular-tablet-desk;
+    }
 
     &__video {
       @include flex-layout(column);
+
+      @include desktop {
+        margin-right: $padding-regular-tablet-desk;
+      }
+
       &-title {
         color: $color-primary-silver;
         text-transform: uppercase;
+        @include desktop {
+          margin-top: 1rem;
+        }
       }
 
       &-image {
@@ -55,6 +68,10 @@
         margin-top: 0.25rem;
         @include tablet {
           width: 50%;
+        }
+
+        @include desktop {
+          width: 20rem;
         }
       }
     }
@@ -65,6 +82,12 @@
       @include tablet {
         border-bottom: 1px solid $color-secondary-mercury;
         padding-bottom: $padding-regular-tablet-desk;
+      }
+
+      @include desktop {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
       }
 
       label {

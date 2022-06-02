@@ -3,6 +3,7 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 import { formatTimestamp } from "../../utils/utilities";
 
+//Component to render out the description of the selected video.
 function Description({ selectedMovie }) {
   return (
     <section className="description section">

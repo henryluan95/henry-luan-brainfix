@@ -1,7 +1,7 @@
 import "./Recommendation.scss";
 import { Link } from "react-router-dom";
 
-function Recommendation({ movieList, changeVideo }) {
+function Recommendation({ movieList }) {
   return (
     <section className="recommendation section">
       <h4 className="recommendation__title">NEXT VIDEOS</h4>
@@ -12,7 +12,6 @@ function Recommendation({ movieList, changeVideo }) {
               key={movie.id}
               className="recommendation__video"
               to={`/videos/${movie.id}`}
-              // onClick={() => changeVideo(movie.id)}
             >
               <img
                 className="recommendation__video-thumbnail"

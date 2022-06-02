@@ -37,11 +37,13 @@ class Home extends Component {
     const currentId = this.props.match.params.videoId;
 
     if (previousId !== currentId) {
-      if (currentId) {
-        this.fetchVideo(currentId);
-      } else {
-        this.fetchVideo(detailedVideoList[0].id);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (!currentId) {
+        return this.fetchVideo(detailedVideoList[0].id);
       }
+
+      this.fetchVideo(currentId);
     }
   }
 
@@ -57,15 +59,6 @@ class Home extends Component {
         })
       )
       .catch((err) => console.error(err));
-  };
-
-  //Create a method to change video
-  changeVideo = (videoId) => {
-    this.setState({
-      selectedMovie: detailedVideoList.find((video) => video.id === videoId),
-    });
-
-    window.scroll({ top: 0, behavior: "smooth" });
   };
 
   //Create method to filter in all unselected videos
@@ -84,10 +77,7 @@ class Home extends Component {
             <Hero selectedMovie={this.state.selectedMovie} />
             <div className="main-content">
               <Info selectedMovie={this.state.selectedMovie} />
-              <Recommendation
-                movieList={this.UnselectedMovieList()}
-                changeVideo={this.changeVideo}
-              />
+              <Recommendation movieList={this.UnselectedMovieList()} />
             </div>
           </main>
         )}

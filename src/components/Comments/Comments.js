@@ -3,57 +3,72 @@ import Button from "../Button/Button";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
 import { formatTimestampDeepDive } from "../../utils/utilities";
+import { Component } from "react";
 
-function Comments({ selectedMovie }) {
-  const { comments } = selectedMovie;
-  return (
-    <section className="comment section">
-      <h4 className="comment__title">{comments.length} Comments</h4>
-      <div className="comment__content">
-        {/*input section */}
-        <div className="comment__input-section">
-          <img
-            src={profileImage}
-            alt="Mohan Murgue"
-            className="comment__avatar"
-          />
-          <form className="comment__form form">
-            <div className="form__container">
-              <label htmlFor="comment">JOIN THE CONVERSATION</label>
-              <textarea
-                name="comment"
-                id="comment"
-                placeholder="Enter your comment"
-              ></textarea>
-            </div>
-            <Button
-              text="Comment"
-              className="comment__button"
-              icon={commentIcon}
+//This component is the comment section of the homepage
+class Comments extends Component {
+  //Add event handler on form submission.
+
+  //Create a method to handle submit
+  submitComment = (e) => {
+    e.preventDefault();
+  };
+
+  render() {
+    const { comments } = this.props;
+    return (
+      <section className="comment section">
+        <h4 className="comment__title">{comments.length} Comments</h4>
+        <div className="comment__content">
+          {/*input section */}
+          <div className="comment__input-section">
+            <img
+              src={profileImage}
+              alt="Mohan Murgue"
+              className="comment__avatar"
             />
-          </form>
-        </div>
-        {/*cards section */}
-        {comments.map((comment, index) => {
-          return (
-            <div key={index} className="card">
-              <div className="card__avatar"></div>
-              <div className="card__detail">
-                <div className="card__header">
-                  <p className="card__author">{comment.name}</p>
-                  <p className="card__date">
-                    {formatTimestampDeepDive(comment.timestamp)}
-                  </p>
-                </div>
-                <p className="card__text">{comment.comment}</p>
-                <Button text="Delete" className="card__delete-button" icon="" />
+            <form className="comment__form form" onSubmit={this.submitComment}>
+              <div className="form__container">
+                <label htmlFor="comment">JOIN THE CONVERSATION</label>
+                <textarea
+                  name="comment"
+                  id="comment"
+                  placeholder="Enter your comment"
+                ></textarea>
               </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
+              <Button
+                text="Comment"
+                className="comment__button"
+                icon={commentIcon}
+              />
+            </form>
+          </div>
+          {/*cards section */}
+          {comments.map((comment, index) => {
+            return (
+              <div key={index} className="card">
+                <div className="card__avatar"></div>
+                <div className="card__detail">
+                  <div className="card__header">
+                    <p className="card__author">{comment.name}</p>
+                    <p className="card__date">
+                      {formatTimestampDeepDive(comment.timestamp)}
+                    </p>
+                  </div>
+                  <p className="card__text">{comment.comment}</p>
+                  <Button
+                    text="Delete"
+                    className="card__delete-button"
+                    icon=""
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    );
+  }
 }
 
 export default Comments;

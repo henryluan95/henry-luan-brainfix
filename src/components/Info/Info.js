@@ -6,7 +6,7 @@ function Info({ selectedMovie }) {
   return (
     <div className="info">
       <Description selectedMovie={selectedMovie} />
-      <Comments selectedMovie={selectedMovie} />
+      <Comments comments={selectedMovie.comments} />
     </div>
   );
 }
