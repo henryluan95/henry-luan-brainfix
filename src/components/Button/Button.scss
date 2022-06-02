@@ -3,12 +3,12 @@
 
 .button {
   height: 2.5rem;
-  background-color: $color-primary-blue;
+  background-color: $primary-CTA-color;
   width: 100%;
   border-radius: 4px;
   border: none;
   position: relative;
-  color: $color-primary-white;
+  color: $CTA-text-color;
   cursor: pointer;
   @include small-screen-labels-button;
 

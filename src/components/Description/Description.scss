@@ -7,7 +7,7 @@
 
   @include desktop {
     padding-top: $padding-before-headline-tablet-desk;
-    border-right: 1px solid $color-secondary-mercury;
+    border-right: 1px solid $line-outline-color;
   }
 
   &__title {
@@ -17,11 +17,11 @@
   .highlight {
     margin: $padding-regular-mobile 0;
     padding: $padding-regular-mobile 0;
-    border-top: 1px solid $color-secondary-mercury;
-    border-bottom: 1px solid $color-secondary-mercury;
+    border-top: 1px solid $line-outline-color;
+    border-bottom: 1px solid $line-outline-color;
     @include flex-layout(row, center, center);
     flex-wrap: wrap;
-    color: $color-primary-silver;
+    color: $secondary-text-color;
 
     @include desktop {
       justify-content: flex-start;
@@ -33,7 +33,7 @@
     &__artist {
       flex: 50%;
       font-weight: 700;
-      color: $color-primary-black;
+      color: $primary-text-color;
       @include desktop {
         flex: none;
         order: 1;
@@ -81,7 +81,7 @@
     }
 
     &__text {
-      color: $color-primary-black;
+      color: $primary-text-color;
     }
   }
 }

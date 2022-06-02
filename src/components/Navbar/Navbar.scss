@@ -48,8 +48,8 @@
     padding-left: 2rem;
     background-size: 1rem;
     order: 1;
-    background-color: $color-secondary-alabaster;
-    border: 1px $color-secondary-mercury solid;
+    background-color: $form-background-color;
+    border: 1px $line-outline-color solid;
     border-radius: 4px;
     min-width: 14.7rem;
     min-height: 2.2rem;
@@ -57,7 +57,7 @@
     width: 100%;
 
     &::placeholder {
-      color: $color-primary-black;
+      color: $primary-text-color;
     }
 
     @include tablet {

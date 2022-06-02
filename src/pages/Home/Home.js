@@ -76,7 +76,10 @@ class Home extends Component {
           <main>
             <Hero selectedMovie={this.state.selectedMovie} />
             <div className="main-content">
-              <Info selectedMovie={this.state.selectedMovie} />
+              <Info
+                selectedMovie={this.state.selectedMovie}
+                fetchVideo={this.fetchVideo}
+              />
               <Recommendation movieList={this.UnselectedMovieList()} />
             </div>
           </main>

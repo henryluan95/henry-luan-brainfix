@@ -6,11 +6,11 @@
   @include small-screen-body-copy;
 
   @include desktop {
-    border-right: 1px solid $color-secondary-mercury;
+    border-right: 1px solid $line-outline-color;
   }
 
   &__content {
-    border-bottom: 1px solid $color-secondary-mercury;
+    border-bottom: 1px solid $line-outline-color;
     @include desktop {
       border: none;
     }
@@ -57,62 +57,9 @@
     }
   }
 
-  .card {
-    @include flex-layout(row, flex-start, flex-start);
-    padding: 1rem 0;
-    border-top: 1px solid $color-secondary-mercury;
-
-    @include desktop {
-      margin-right: -2rem;
-    }
-
-    &__avatar {
-      min-width: 2.25rem;
-      height: 2.25rem;
-      border-radius: 50%;
-      background-color: $color-secondary-mercury;
-    }
-
-    &__detail {
-      margin-left: 1rem;
-      width: 100%;
-      @include flex-layout(column, center);
-    }
-
-    &__header {
-      @include flex-layout(row, space-between);
-      margin-bottom: 1rem;
-      width: 100%;
-    }
-
-    &__author {
-      font-weight: 700;
-    }
-
-    &__date {
-      color: $color-primary-silver;
-      @include desktop {
-        margin-right: 2rem;
-      }
-    }
-
-    &__text {
-      @include desktop {
-        margin-right: 2rem;
-      }
-    }
-
-    &__delete-button {
-      margin: 1rem 0 0 auto;
-      @include desktop {
-        margin-right: 2rem;
-      }
-    }
-  }
-
   label {
     @include small-screen-labels-button;
-    color: $color-primary-silver;
+    color: $secondary-text-color;
   }
 
   textarea {
@@ -120,7 +67,7 @@
     width: 100%;
     border-radius: 4px;
     padding: 0.75rem;
-    border: 1px solid $color-secondary-mercury;
+    border: 1px solid $line-outline-color;
     font-family: inherit;
     min-height: 6rem;
     resize: none;
@@ -133,11 +80,64 @@
     }
 
     &::placeholder {
-      color: $color-primary-black;
+      color: $secondary-text-color;
     }
 
     &:focus {
-      border: 1px solid $color-primary-black;
+      border: 1px solid $primary-text-color;
+    }
+  }
+}
+
+.card {
+  @include flex-layout(row, flex-start, flex-start);
+  padding: 1rem 0;
+  border-top: 1px solid $line-outline-color;
+
+  @include desktop {
+    margin-right: -2rem;
+  }
+
+  &__avatar {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: $line-outline-color;
+  }
+
+  &__detail {
+    margin-left: 1rem;
+    width: 100%;
+    @include flex-layout(column, center);
+  }
+
+  &__header {
+    @include flex-layout(row, space-between);
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  &__author {
+    font-weight: 700;
+  }
+
+  &__date {
+    color: $secondary-text-color;
+    @include desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__text {
+    @include desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__delete-button {
+    margin: 1rem 0 0 auto;
+    @include desktop {
+      margin-right: 2rem;
     }
   }
 }

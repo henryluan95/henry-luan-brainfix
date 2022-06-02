@@ -4,10 +4,16 @@ import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
 import { formatTimestampDeepDive } from "../../utils/utilities";
 import { Component } from "react";
+import axios from "axios";
 
 //This component is the comment section of the homepage
 class Comments extends Component {
   //Add event handler on form submission.
+
+  //Create a method to post a comment
+  // postComment = (url) =>{
+  //   axios.post(url)
+  // }
 
   //Create a method to handle submit
   submitComment = (e) => {
@@ -47,7 +53,7 @@ class Comments extends Component {
           {comments.map((comment, index) => {
             return (
               <div key={index} className="card">
-                <div className="card__avatar"></div>
+                <img className="card__avatar"></img>
                 <div className="card__detail">
                   <div className="card__header">
                     <p className="card__author">{comment.name}</p>
