@@ -6,7 +6,6 @@ import { formatTimestampDeepDive } from "../../utils/utilities";
 
 function Comments({ selectedMovie }) {
   const { comments } = selectedMovie;
-
   return (
     <section className="comment section">
       <h4 className="comment__title">{comments.length} Comments</h4>

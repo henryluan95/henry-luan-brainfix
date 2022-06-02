@@ -9,6 +9,7 @@
   border: none;
   position: relative;
   color: $color-primary-white;
+  cursor: pointer;
   @include small-screen-labels-button;
 
   @include tablet {
