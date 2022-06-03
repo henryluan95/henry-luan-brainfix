@@ -8,20 +8,61 @@ import axios from "axios";
 
 //This component is the comment section of the homepage
 class Comments extends Component {
-  //Add event handler on form submission.
+  //set state for input
+  state = {
+    inputValue: "",
+  };
 
-  //Create a method to post a comment
-  // postComment = (url) =>{
-  //   axios.post(url)
-  // }
+  //Create a method to handle changes in input field
+  handleChange = (e) => {
+    this.setState({
+      inputValue: e.target.value,
+    });
+  };
+
+  // DIVING DEEPER
+  // Create a method to post a comment
+  postComment = (url, commentObject) => {
+    axios
+      .post(url, commentObject)
+      .then((response) => {
+        const { fetchVideo } = this.props;
+        fetchVideo(this.props.videoId);
+      })
+      .catch((err) => console.error(err));
+  };
+
+  // DIVING DEEPER
+  // Create a method to delete a comment
+  deleteComment = (commentId) => {
+    axios
+      .delete(
+        `https://project-2-api.herokuapp.com/videos/${this.props.videoId}/comments/${commentId}?api_key=4e36f143-1113-4719-99e8-409707249a72`
+      )
+      .then((response) => {
+        const { fetchVideo } = this.props;
+        fetchVideo(this.props.videoId);
+      })
+      .catch((err) => console.error(err));
+  };
 
   //Create a method to handle submit
   submitComment = (e) => {
     e.preventDefault();
+    const comment = {
+      name: "Mohan Murgue",
+      comment: this.state.inputValue,
+    };
+
+    this.postComment(
+      `https://project-2-api.herokuapp.com/videos/${this.props.videoId}/comments?api_key=4e36f143-1113-4719-99e8-409707249a72`,
+      comment
+    );
   };
 
   render() {
     const { comments } = this.props;
+
     return (
       <section className="comment section">
         <h4 className="comment__title">{comments.length} Comments</h4>
@@ -40,7 +81,9 @@ class Comments extends Component {
                   name="comment"
                   id="comment"
                   placeholder="Enter your comment"
-                ></textarea>
+                  value={this.state.inputValue}
+                  onChange={this.handleChange}
+                />
               </div>
               <Button
                 text="Comment"
@@ -50,10 +93,10 @@ class Comments extends Component {
             </form>
           </div>
           {/*cards section */}
-          {comments.map((comment, index) => {
+          {comments.map((comment) => {
             return (
-              <div key={index} className="card">
-                <img className="card__avatar"></img>
+              <div key={comment.id} className="card">
+                <img className="card__avatar" alt="empty profile" src="/"></img>
                 <div className="card__detail">
                   <div className="card__header">
                     <p className="card__author">{comment.name}</p>
@@ -66,6 +109,7 @@ class Comments extends Component {
                     text="Delete"
                     className="card__delete-button"
                     icon=""
+                    onClick={() => this.deleteComment(comment.id)}
                   />
                 </div>
               </div>

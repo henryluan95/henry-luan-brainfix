@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.scss";
 
+//Component that render video player
 function Hero({ selectedMovie }) {
   return (
     <div className="hero">

@@ -5,6 +5,7 @@ import brainFixLogo from "../../assets/Logo/BrainFlix-logo.svg";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import { Link } from "react-router-dom";
 
+//Component that renders out navbar
 function PageHeader() {
   return (
     <header>

@@ -1,6 +1,7 @@
 import "./Recommendation.scss";
 import { Link } from "react-router-dom";
 
+//Component that renders out recommendation videos
 function Recommendation({ movieList }) {
   return (
     <section className="recommendation section">
