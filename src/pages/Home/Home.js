@@ -5,6 +5,7 @@ import Hero from "../../components/Hero/Hero";
 import Info from "../../components/Info/Info";
 import Recommendation from "../../components/Recommendation/Recommendation";
 import axios from "axios";
+import { Loader } from "../../components/Loader/Loader";
 
 const apiKey = "4e36f143-1113-4719-99e8-409707249a72";
 const baseUrl = "https://project-2-api.herokuapp.com";
@@ -75,7 +76,7 @@ class Home extends Component {
     return (
       <>
         {/*Statement to handle loading time while fetching data*/}
-        {!this.state.selectedMovie && <p>Loading..</p>}
+        {!this.state.selectedMovie && <Loader />}
         {/*Display data after fetching successfully*/}
         {this.state.selectedMovie && (
           <main>
