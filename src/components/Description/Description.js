@@ -7,7 +7,7 @@ import { formatTimestamp } from "../../utils/utilities";
 function Description({ selectedMovie }) {
   return (
     <section className="description section">
-      <h2 className="description__title">{selectedMovie.title}</h2>
+      <h1 className="description__title">{selectedMovie.title}</h1>
       <div className="highlight">
         <span className="highlight__artist">By {selectedMovie.channel}</span>
         <div className="highlight__views">

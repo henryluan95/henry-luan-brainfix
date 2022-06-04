@@ -7,3 +7,18 @@
     padding: $padding-regular-tablet-desk;
   }
 }
+
+h1 {
+  @include small-screen-page-header;
+  @include tablet {
+    @include large-screen-page-header;
+  }
+}
+
+p,
+span {
+  @include small-screen-body-copy;
+  @include tablet {
+    @include large-screen-body-copy;
+  }
+}

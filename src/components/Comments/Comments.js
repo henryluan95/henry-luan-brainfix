@@ -1,10 +1,11 @@
+import axios from "axios";
+import { Component } from "react";
 import "./Comments.scss";
 import Button from "../Button/Button";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
 import { formatTimestampDeepDive } from "../../utils/utilities";
-import { Component } from "react";
-import axios from "axios";
+import emptyprofile from "../../assets/Images/emptyprofile.svg";
 
 //This component is the comment section of the homepage
 class Comments extends Component {
@@ -28,6 +29,9 @@ class Comments extends Component {
       .then((response) => {
         const { fetchVideo } = this.props;
         fetchVideo(this.props.videoId);
+        this.setState({
+          inputValue: "",
+        });
       })
       .catch((err) => console.error(err));
   };
@@ -96,7 +100,11 @@ class Comments extends Component {
           {comments.map((comment) => {
             return (
               <div key={comment.id} className="card">
-                <img className="card__avatar" alt="empty profile" src="/"></img>
+                <img
+                  className="card__avatar"
+                  alt="empty profile"
+                  src={emptyprofile}
+                ></img>
                 <div className="card__detail">
                   <div className="card__header">
                     <p className="card__author">{comment.name}</p>

@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 @use "../../styles/mixin" as *;
 
-.button {
+.link {
   height: 2.5rem;
   background-color: $primary-CTA-color;
   width: 100%;
@@ -9,7 +9,8 @@
   border: none;
   position: relative;
   color: $CTA-text-color;
-  cursor: pointer;
+  text-decoration: none;
+  @include flex-layout(row, center, center);
   @include small-screen-labels-button;
 
   @include tablet {

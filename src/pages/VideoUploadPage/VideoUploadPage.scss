@@ -42,9 +42,19 @@
       padding-top: $padding-regular-tablet-desk;
     }
     @include desktop {
-      @include flex-layout(row, space-between, center);
-      border-bottom: 1px solid $line-outline-color;
+      @include flex-layout(column, space-between, flex-start);
       padding-bottom: $padding-regular-tablet-desk;
+    }
+
+    &__information {
+      overflow: hidden;
+      @include tablet {
+        width: 100%;
+      }
+
+      @include desktop {
+        @include flex-layout(row);
+      }
     }
 
     &__video {
@@ -57,8 +67,12 @@
       &-title {
         color: $secondary-text-color;
         text-transform: uppercase;
-        @include desktop {
+        font-weight: 700;
+
+        @include tablet {
           margin-top: 1rem;
+          font-size: 0.75rem;
+          line-height: 1.25rem;
         }
       }
 
@@ -79,26 +93,24 @@
     &__details {
       padding-bottom: $padding-regular-mobile;
 
-      @include tablet {
-        border-bottom: 1px solid $line-outline-color;
-        padding-bottom: $padding-regular-tablet-desk;
-      }
-
       @include desktop {
         width: 100%;
         border-bottom: none;
         padding-bottom: 0;
       }
 
-      label {
+      &-label {
         @include flex-layout(column, center);
-        color: secondary-text-color;
+        color: $secondary-text-color;
         margin-top: $padding-regular-mobile;
         text-transform: uppercase;
+        @include small-screen-labels-button;
+        @include tablet {
+          @include large-screen-labels-button;
+        }
       }
 
-      input,
-      textarea {
+      &-input {
         font-family: inherit;
         width: 100%;
         min-width: 15rem;
@@ -127,9 +139,18 @@
   }
 
   &__buttons {
+    padding-top: $padding-regular-mobile;
+
     @include tablet {
+      margin-top: $padding-regular-tablet-desk;
+      border-top: 1px solid $line-outline-color;
       padding-top: $padding-before-headline-mobile;
       @include flex-layout(row, flex-end, center);
+    }
+
+    @include desktop {
+      align-self: flex-end;
+      margin-left: -23rem;
     }
 
     &--publish {

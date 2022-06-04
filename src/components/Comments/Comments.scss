@@ -99,10 +99,13 @@
   }
 
   &__avatar {
-    min-width: 2.25rem;
+    max-width: 2.25rem;
     height: 2.25rem;
     border-radius: 50%;
     background-color: $line-outline-color;
+    white-space: nowrap;
+    text-indent: 200%;
+    overflow: hidden;
   }
 
   &__detail {

@@ -3,15 +3,10 @@
 
 .description {
   padding-top: $padding-before-headline-mobile;
-  @include small-screen-body-copy;
 
   @include desktop {
     padding-top: $padding-before-headline-tablet-desk;
     border-right: 1px solid $line-outline-color;
-  }
-
-  &__title {
-    @include small-screen-page-header;
   }
 
   .highlight {
