@@ -17,6 +17,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
+    //Get data and setState with acquired data
     axios
       .get(getVideosUrl)
       .then((response) => {
@@ -24,6 +25,7 @@ class Home extends Component {
           detailedVideoList: response.data,
         });
 
+        //Check url on mount to display correct video
         const currentVideoId =
           this.props.match.params.videoId || detailedVideoList[0].id;
 
@@ -36,6 +38,7 @@ class Home extends Component {
     const previousId = prevProps.match.params.videoId;
     const currentId = this.props.match.params.videoId;
 
+    //Check to see if we switched url and display correct video
     if (previousId !== currentId) {
       window.scrollTo({ top: 0, behavior: "smooth" });
 
@@ -71,7 +74,9 @@ class Home extends Component {
   render() {
     return (
       <>
+        {/*Statement to handle loading time while fetching data*/}
         {!this.state.selectedMovie && <p>Loading..</p>}
+        {/*Display data after fetching successfully*/}
         {this.state.selectedMovie && (
           <main>
             <Hero selectedMovie={this.state.selectedMovie} />
