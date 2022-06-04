@@ -9,7 +9,7 @@ function Description({ selectedMovie }) {
     <section className="description section">
       <h1 className="description__title">{selectedMovie.title}</h1>
       <div className="highlight">
-        <span className="highlight__artist">By {selectedMovie.channel}</span>
+        <h4 className="highlight__artist">By {selectedMovie.channel}</h4>
         <div className="highlight__views">
           <img
             className="highlight__views-icon"

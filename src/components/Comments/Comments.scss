@@ -3,7 +3,6 @@
 
 .comment {
   padding-top: 0;
-  @include small-screen-body-copy;
 
   @include desktop {
     border-right: 1px solid $line-outline-color;
@@ -18,7 +17,6 @@
 
   &__title {
     margin-bottom: $padding-regular-mobile;
-    @include small-screen-subheader;
   }
 
   &__avatar {
@@ -58,7 +56,6 @@
   }
 
   label {
-    @include small-screen-labels-button;
     color: $secondary-text-color;
   }
 

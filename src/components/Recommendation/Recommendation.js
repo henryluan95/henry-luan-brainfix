@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Recommendation({ movieList }) {
   return (
     <section className="recommendation section">
-      <h4 className="recommendation__title">NEXT VIDEOS</h4>
+      <h3 className="recommendation__title">NEXT VIDEOS</h3>
       <div className="recommendation__videos">
         {movieList.map((movie) => {
           return (
@@ -20,8 +20,8 @@ function Recommendation({ movieList }) {
                 alt={`Video of ${movie.title}`}
               />
               <div className="recommendation__video-info info">
-                <p className="info__title">{movie.title}</p>
-                <span className="info__artist">{movie.channel}</span>
+                <h3 className="info__title">{movie.title}</h3>
+                <h3 className="info__artist">{movie.channel}</h3>
               </div>
             </Link>
           );

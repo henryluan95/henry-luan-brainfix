@@ -15,10 +15,32 @@ h1 {
   }
 }
 
+h3 {
+  @include small-screen-section-header;
+  @include tablet {
+    @include large-screen-section-header;
+  }
+}
+
+h4 {
+  @include small-screen-subheader;
+  @include tablet {
+    @include large-screen-subheader;
+  }
+}
+
 p,
 span {
   @include small-screen-body-copy;
   @include tablet {
     @include large-screen-body-copy;
+  }
+}
+
+label,
+button {
+  @include small-screen-labels-button;
+  @include tablet {
+    @include large-screen-labels-button;
   }
 }

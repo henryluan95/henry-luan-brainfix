@@ -2,6 +2,12 @@
 @use "../styles/variables" as *;
 @use "../styles/mixin" as *;
 
+#root {
+  @include desktop {
+    overflow: hidden;
+  }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -26,10 +32,4 @@ h4,
 p {
   margin: 0;
   padding: 0;
-}
-
-#root {
-  @include desktop {
-    overflow: hidden;
-  }
 }

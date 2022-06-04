@@ -3,7 +3,6 @@
 
 .recommendation {
   padding-top: 0;
-  @include small-screen-body-copy;
 
   @include desktop {
     padding-top: $padding-before-headline-tablet-desk;
@@ -11,7 +10,6 @@
 
   &__title {
     color: $secondary-text-color;
-    font-weight: 400;
   }
 
   &__videos {
@@ -25,7 +23,7 @@
   &__video {
     @include flex-layout(row, space-between, stretch);
     margin-top: $padding-regular-mobile;
-    height: 3.8rem;
+    height: 4rem;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -46,8 +44,11 @@
       max-width: 10rem;
     }
 
+    &__artist {
+      font-weight: 400;
+    }
+
     &__title {
-      font-weight: 700;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;

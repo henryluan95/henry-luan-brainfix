@@ -10,13 +10,11 @@
   position: relative;
   color: $CTA-text-color;
   cursor: pointer;
-  @include small-screen-labels-button;
 
   @include tablet {
     min-width: 9.375rem;
     width: 9.375rem;
     padding: 0 2rem;
-    @include large-screen-labels-button;
   }
 
   &__icon {

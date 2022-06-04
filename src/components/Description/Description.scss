@@ -39,6 +39,7 @@
     &__views {
       flex: 50%;
       @include flex-layout(row, flex-start, center);
+
       @include desktop {
         flex: none;
         order: 3;
@@ -47,12 +48,19 @@
 
       &-count {
         margin: 0.1rem 0 0 0.5rem;
+        @include tablet {
+          font-size: 0.75rem;
+        }
       }
     }
 
     &__date {
       margin-top: $padding-regular-mobile;
       flex: 50%;
+
+      @include tablet {
+        font-size: 0.75rem;
+      }
       @include desktop {
         margin-top: 0;
         flex: none;
@@ -72,6 +80,9 @@
 
       &-count {
         margin: 0.1rem 0 0 0.5rem;
+        @include tablet {
+          font-size: 0.75rem;
+        }
       }
     }
 

@@ -5,7 +5,7 @@
 .upload {
   padding-top: 0;
   overflow: hidden;
-  @include small-screen-body-copy;
+
   @include desktop {
     padding: 0 6.5rem;
     max-width: 80rem;
@@ -16,7 +16,6 @@
   &__title {
     padding-top: $padding-before-headline-mobile;
     position: relative;
-    @include small-screen-page-header;
 
     &::before {
       content: "";
@@ -43,6 +42,7 @@
     }
     @include desktop {
       @include flex-layout(column, space-between, flex-start);
+      padding-top: 0.5rem;
       padding-bottom: $padding-regular-tablet-desk;
     }
 
@@ -104,10 +104,6 @@
         color: $secondary-text-color;
         margin-top: $padding-regular-mobile;
         text-transform: uppercase;
-        @include small-screen-labels-button;
-        @include tablet {
-          @include large-screen-labels-button;
-        }
       }
 
       &-input {
@@ -139,7 +135,7 @@
   }
 
   &__buttons {
-    padding-top: $padding-regular-mobile;
+    padding-top: $padding-before-headline-mobile;
 
     @include tablet {
       margin-top: $padding-regular-tablet-desk;
