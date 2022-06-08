@@ -41,7 +41,7 @@ class Comments extends Component {
   deleteComment = (commentId) => {
     axios
       .delete(
-        `https://project-2-api.herokuapp.com/videos/${this.props.videoId}/comments/${commentId}?api_key=4e36f143-1113-4719-99e8-409707249a72`
+        `http://localhost:8080/videos/${this.props.videoId}/comments/${commentId}`
       )
       .then((response) => {
         const { fetchVideo } = this.props;
@@ -59,7 +59,7 @@ class Comments extends Component {
     };
 
     this.postComment(
-      `https://project-2-api.herokuapp.com/videos/${this.props.videoId}/comments?api_key=4e36f143-1113-4719-99e8-409707249a72`,
+      `http://localhost:8080/videos/${this.props.videoId}/comments`,
       comment
     );
   };
@@ -99,7 +99,7 @@ class Comments extends Component {
           {/*cards section */}
           {comments.map((comment) => {
             return (
-              <div key={comment.id} className="card">
+              <div key={comment.timestamp} className="card">
                 <img
                   className="card__avatar"
                   alt="empty profile"
@@ -117,7 +117,7 @@ class Comments extends Component {
                     text="Delete"
                     className="card__delete-button"
                     icon=""
-                    onClick={() => this.deleteComment(comment.id)}
+                    onClick={() => this.deleteComment(comment.timestamp)}
                   />
                 </div>
               </div>
