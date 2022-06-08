@@ -17,7 +17,7 @@ const VideoUploadPage = (props) => {
 
     //Check if title input is filled
     const titleInputEl = e.target.title;
-    if (!title) {
+    if (!title.trim()) {
       titleInputEl.classList.add("input__details-input--error");
       valid = false;
     } else {
@@ -26,7 +26,7 @@ const VideoUploadPage = (props) => {
 
     //Check if title input is filled
     const descriptionInputEl = e.target.description;
-    if (!description) {
+    if (!description.trim()) {
       descriptionInputEl.classList.add("input__details-input--error");
       valid = false;
     } else {
