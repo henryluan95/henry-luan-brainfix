@@ -20,7 +20,7 @@ class Home extends Component {
   componentDidMount() {
     //Get data and setState with acquired data
     axios
-      .get(getVideosUrl)
+      .get("http://localhost:8080/videos")
       .then((response) => {
         this.setState({
           detailedVideoList: response.data,
@@ -54,9 +54,7 @@ class Home extends Component {
   //Create a method to fetch matching id video
   fetchVideo = (videoId) => {
     axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4e36f143-1113-4719-99e8-409707249a72`
-      )
+      .get(`http://localhost:8080/videos/${videoId}`)
       .then((response) =>
         this.setState({
           selectedMovie: response.data,

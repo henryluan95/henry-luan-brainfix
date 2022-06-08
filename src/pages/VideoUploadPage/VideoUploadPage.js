@@ -3,14 +3,51 @@ import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import Button from "../../components/Button/Button";
 import publishIcon from "../../assets/Icons/publish.svg";
+import axios from "axios";
 
 const VideoUploadPage = (props) => {
   const handleSubmit = (e) => {
+    //prevent browser from refreshing
     e.preventDefault();
-    if (
-      e.nativeEvent.submitter.className === "button upload__buttons--publish"
-    ) {
-      alert("Submission Success");
+    //Get values from input fields
+    const title = e.target.title.value;
+    const description = e.target.description.value;
+    //Create valid variable to validate inputs
+    let valid = true;
+
+    //Check if title input is filled
+    const titleInputEl = e.target.title;
+    if (!title) {
+      titleInputEl.classList.add("input__details-input--error");
+      valid = false;
+    } else {
+      titleInputEl.classList.remove("input__details-input--error");
+    }
+
+    //Check if title input is filled
+    const descriptionInputEl = e.target.description;
+    if (!description) {
+      descriptionInputEl.classList.add("input__details-input--error");
+      valid = false;
+    } else {
+      descriptionInputEl.classList.remove("input__details-input--error");
+    }
+
+    if (valid) {
+      //Create new Video object
+      const newVideo = {
+        title,
+        description,
+      };
+
+      //post it to API
+      axios.post("http://localhost:8080/videos", newVideo);
+
+      //Clean input fields
+      e.target.title.value = "";
+      e.target.description.value = "";
+
+      //when form submits, return to home back
       props.history.push("/");
     }
   };
@@ -35,6 +72,7 @@ const VideoUploadPage = (props) => {
                 className="input__details-input"
                 type="text"
                 placeholder="Add a title to your video"
+                name="title"
               />
             </label>
             <label className="input__details-label">
@@ -43,6 +81,7 @@ const VideoUploadPage = (props) => {
                 className="input__details-input"
                 type="text"
                 placeholder="Add a description to your video"
+                name="description"
               />
             </label>
             <div className="upload__buttons">
@@ -51,7 +90,11 @@ const VideoUploadPage = (props) => {
                 className="upload__buttons--publish"
                 icon={publishIcon}
               />
-              <Button text="Cancel" className="upload__buttons--cancel" />
+              <Button
+                text="Cancel"
+                className="upload__buttons--cancel"
+                type="button"
+              />
             </div>
           </form>
         </div>

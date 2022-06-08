@@ -121,6 +121,15 @@
           color: $primary-text-color;
         }
 
+        &:focus {
+          border: 1px solid $primary-CTA-color;
+          outline: none;
+        }
+
+        &--error {
+          border: 1px solid red;
+        }
+
         @include tablet {
           padding: 1rem;
           min-height: 2.5rem;
