@@ -6,10 +6,7 @@ import Info from "../../components/Info/Info";
 import Recommendation from "../../components/Recommendation/Recommendation";
 import axios from "axios";
 import { Loader } from "../../components/Loader/Loader";
-
-const apiKey = "4e36f143-1113-4719-99e8-409707249a72";
-const baseUrl = "https://project-2-api.herokuapp.com";
-const getVideosUrl = baseUrl + "/videos?api_key=" + apiKey;
+import AlertBox from "../../components/AlertBox/AlertBox";
 
 class Home extends Component {
   state = {
@@ -49,6 +46,8 @@ class Home extends Component {
 
       this.fetchVideo(currentId);
     }
+
+    document.body.style.cursor = "default";
   }
 
   //Create a method to fetch matching id video
@@ -63,7 +62,7 @@ class Home extends Component {
       .catch((err) => console.error(err));
   };
 
-  //Create method to filter in all unselected videos
+  //Create a method to filter in all unselected videos
   UnselectedMovieList = () => {
     return this.state.detailedVideoList.filter(
       (video) => video.id !== this.state.selectedMovie.id
@@ -71,6 +70,7 @@ class Home extends Component {
   };
 
   render() {
+    const { setAlert, isUploaded } = this.props;
     return (
       <>
         {/*Statement to handle loading time while fetching data*/}
@@ -78,6 +78,12 @@ class Home extends Component {
         {/*Display data after fetching successfully*/}
         {this.state.selectedMovie && (
           <main>
+            {isUploaded && (
+              <AlertBox
+                alertText={"Video Uploaded Successfully"}
+                setAlert={setAlert}
+              />
+            )}
             <Hero selectedMovie={this.state.selectedMovie} />
             <div className="main-content">
               <Info

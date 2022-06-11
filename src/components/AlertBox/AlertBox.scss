@@ -1,0 +1,29 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixin" as *;
+
+.alert {
+  background-color: $primary-CTA-color;
+  @include flex-layout(row, space-between, center);
+  height: 2.5rem;
+  padding: 0 1.5rem;
+
+  @include tablet {
+    max-width: 40%;
+    margin: 0 auto;
+    margin-bottom: $padding-regular-mobile;
+  }
+
+  &__text {
+    color: $CTA-text-color;
+    font-weight: 700;
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
+    color: $CTA-text-color;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+}

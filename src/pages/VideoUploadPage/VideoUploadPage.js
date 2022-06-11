@@ -1,9 +1,9 @@
 import React from "react";
 import "./VideoUploadPage.scss";
+import axios from "axios";
 import thumbnail from "../../assets/Images/Upload-video-preview.jpg";
 import Button from "../../components/Button/Button";
 import publishIcon from "../../assets/Icons/publish.svg";
-import axios from "axios";
 
 const VideoUploadPage = (props) => {
   const handleSubmit = (e) => {
@@ -49,6 +49,8 @@ const VideoUploadPage = (props) => {
 
       //when form submits, return to home back
       props.history.push("/");
+
+      props.setAlert();
     }
   };
 
