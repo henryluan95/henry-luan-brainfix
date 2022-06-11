@@ -14,6 +14,9 @@ class Home extends Component {
   };
 
   componentDidMount() {
+    //Change page title
+    document.title = "BrainFlix";
+
     //Get data and setState with acquired data
     axios
       .get("http://localhost:8080/videos")
@@ -26,6 +29,7 @@ class Home extends Component {
         const currentVideoId =
           this.props.match.params.videoId || response.data[0].id;
 
+        //fetch correct video based on url on mount
         this.fetchVideo(currentVideoId);
       })
       .catch((err) => console.error(err));
@@ -45,8 +49,6 @@ class Home extends Component {
 
       this.fetchVideo(currentId);
     }
-
-    document.body.style.cursor = "default";
   }
 
   //Create a method to fetch matching id video

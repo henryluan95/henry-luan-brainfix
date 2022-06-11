@@ -4,7 +4,7 @@ import "./Comments.scss";
 import Button from "../Button/Button";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/Icons/add_comment.svg";
-import { formatTimestampDeepDive } from "../../utils/utilities";
+import { formatTimestampDeepDive } from "../../utils/timeFormat";
 import emptyprofile from "../../assets/Images/emptyprofile.svg";
 
 //This component is the comment section of the homepage

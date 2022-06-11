@@ -1,7 +1,7 @@
 import "./App.scss";
 import { Component } from "react";
 import Home from "./pages/Home/Home";
-import PageHeader from "./components/Navbar/Navbar";
+import PageHeader from "./components/PageHeader/PageHeader";
 import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 

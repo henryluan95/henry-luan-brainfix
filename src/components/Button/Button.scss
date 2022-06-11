@@ -11,6 +11,10 @@
   color: $CTA-text-color;
   cursor: pointer;
 
+  &:hover {
+    background-color: $CTA-hover-color;
+  }
+
   @include tablet {
     min-width: 9.375rem;
     width: 9.375rem;

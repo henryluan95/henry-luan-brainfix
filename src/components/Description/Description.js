@@ -1,7 +1,7 @@
 import "./Description.scss";
 import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
-import { formatTimestamp } from "../../utils/utilities";
+import { formatTimestamp } from "../../utils/timeFormat";
 
 //Component to render out the description of the selected video.
 function Description({ selectedMovie }) {

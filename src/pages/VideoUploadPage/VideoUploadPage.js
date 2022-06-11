@@ -6,6 +6,9 @@ import Button from "../../components/Button/Button";
 import publishIcon from "../../assets/Icons/publish.svg";
 
 const VideoUploadPage = (props) => {
+  //Change page title
+  document.title = "Upload Page";
+
   const handleSubmit = (e) => {
     //prevent browser from refreshing
     e.preventDefault();

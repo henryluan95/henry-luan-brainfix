@@ -1,9 +1,9 @@
-import "./Navbar.scss";
+import "./PageHeader.scss";
 import profileImage from "../../assets/Images/Mohan-muruge.jpg";
 import brainFixLogo from "../../assets/Logo/BrainFlix-logo.svg";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import { Link } from "react-router-dom";
-import LinkButton from "../Link/LinkButton";
+import LinkButton from "../LinkButton/LinkButton";
 
 //Component that renders out navbar
 function PageHeader() {

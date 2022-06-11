@@ -13,6 +13,10 @@
   @include flex-layout(row, center, center);
   @include small-screen-labels-button;
 
+  &:hover {
+    background-color: $CTA-hover-color;
+  }
+
   @include tablet {
     min-width: 9.375rem;
     width: 9.375rem;
