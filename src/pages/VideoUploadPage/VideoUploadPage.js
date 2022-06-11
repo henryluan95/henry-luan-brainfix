@@ -54,6 +54,10 @@ const VideoUploadPage = (props) => {
     }
   };
 
+  const cancelSubmit = () => {
+    props.history.push("/");
+  };
+
   return (
     <main className="upload section">
       <h1 className="upload__title">Upload Video</h1>
@@ -96,6 +100,7 @@ const VideoUploadPage = (props) => {
                 text="Cancel"
                 className="upload__buttons--cancel"
                 type="button"
+                onClick={cancelSubmit}
               />
             </div>
           </form>
