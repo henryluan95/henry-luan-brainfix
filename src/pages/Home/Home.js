@@ -1,6 +1,5 @@
 import "./Home.scss";
 import { Component } from "react";
-import detailedVideoList from "../../data/video-details.json";
 import Hero from "../../components/Hero/Hero";
 import Info from "../../components/Info/Info";
 import Recommendation from "../../components/Recommendation/Recommendation";
@@ -25,7 +24,7 @@ class Home extends Component {
 
         //Check url on mount to display correct video
         const currentVideoId =
-          this.props.match.params.videoId || detailedVideoList[0].id;
+          this.props.match.params.videoId || response.data[0].id;
 
         this.fetchVideo(currentVideoId);
       })
@@ -41,7 +40,7 @@ class Home extends Component {
       window.scrollTo({ top: 0, behavior: "smooth" });
 
       if (!currentId) {
-        return this.fetchVideo(detailedVideoList[0].id);
+        return this.fetchVideo(this.state.detailedVideoList[0].id);
       }
 
       this.fetchVideo(currentId);
