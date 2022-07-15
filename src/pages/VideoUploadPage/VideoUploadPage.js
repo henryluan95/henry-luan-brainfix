@@ -44,7 +44,10 @@ const VideoUploadPage = (props) => {
       };
 
       //post it to API
-      axios.post("http://localhost:8080/videos", newVideo);
+      axios.post(
+        "https://henry-luan-brainflix-api.herokuapp.com/videos",
+        newVideo
+      );
 
       //Clean input fields
       e.target.title.value = "";

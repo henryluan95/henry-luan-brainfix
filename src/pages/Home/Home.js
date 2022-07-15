@@ -19,7 +19,7 @@ class Home extends Component {
 
     //Get data and setState with acquired data
     axios
-      .get("http://localhost:8080/videos")
+      .get("https://henry-luan-brainflix-api.herokuapp.com/videos")
       .then((response) => {
         this.setState({
           detailedVideoList: response.data,
@@ -54,7 +54,7 @@ class Home extends Component {
   //Create a method to fetch matching id video
   fetchVideo = (videoId) => {
     axios
-      .get(`http://localhost:8080/videos/${videoId}`)
+      .get(`https://henry-luan-brainflix-api.herokuapp.com/videos/${videoId}`)
       .then((response) =>
         this.setState({
           selectedMovie: response.data,

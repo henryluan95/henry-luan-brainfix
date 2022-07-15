@@ -41,7 +41,7 @@ class Comments extends Component {
   deleteComment = (commentId) => {
     axios
       .delete(
-        `http://localhost:8080/videos/${this.props.videoId}/comments/${commentId}`
+        `https://henry-luan-brainflix-api.herokuapp.com/videos/${this.props.videoId}/comments/${commentId}`
       )
       .then((response) => {
         const { fetchVideo } = this.props;
@@ -59,7 +59,7 @@ class Comments extends Component {
     };
 
     this.postComment(
-      `http://localhost:8080/videos/${this.props.videoId}/comments`,
+      `https://henry-luan-brainflix-api.herokuapp.com/videos/${this.props.videoId}/comments`,
       comment
     );
   };
