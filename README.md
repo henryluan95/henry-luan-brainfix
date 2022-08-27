@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# BRAINFLIX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Brainflix is a new video streaming platform which users can watch and upload new videos. This project is an assignment that I did when I was a student at BrainStation. As per requirements, I built both frontend and backend for this assignment. The frontend ensures users getting the requested video upon chosing a video from the recommended section while the backend provides different endpoints to get, post, delete data.
 
-## Available Scripts
+Please click here for the live website: https://henry-luan-brainflix.herokuapp.com/
 
-In the project directory, you can run:
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-### `npm start`
+## Project Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**HomePage**
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/personal-e4e76.appspot.com/o/Brainflix%2FScreen%20Shot%202022-08-27%20at%2011.21.49%20AM.png?alt=media&token=9e1d7866-f579-42f4-8bc2-f638117ce178)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Comments and Recommendations**
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/personal-e4e76.appspot.com/o/Brainflix%2FScreen%20Shot%202022-08-27%20at%2011.22.08%20AM.png?alt=media&token=d60f07af-34f2-4701-9737-0450ac4d4762)
 
-### `npm test`
+**Upload Page**
+![App Screenshot](https://firebasestorage.googleapis.com/v0/b/personal-e4e76.appspot.com/o/Brainflix%2FScreen%20Shot%202022-08-27%20at%2011.22.31%20AM.png?alt=media&token=6094ee55-ac7c-4a5c-a0dd-b8f59cdc277b)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tech Stacks
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository.
+```$ git clone https://github.com/henryluan95/henry-luan-brainfix.git```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Run `npm install` from inside the client directory.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+$ cd henry-luan-brainflix
+$ npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start React App
+```$ npm start```
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Henry Luan [@henryluan](https://github.com/henryluan95)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acknowledgements
 
-### Code Splitting
+All the mockups and functional requirements are provided by BrainStation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
