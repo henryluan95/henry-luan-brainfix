@@ -29,7 +29,7 @@ Note: The website takes a bit to load initially because of ✨Heroku✨
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
 
-## Installation
+## Installation For FrontEnd
 
 1. Clone this repository.
 ```$ git clone https://github.com/henryluan95/henry-luan-brainfix.git```
@@ -44,6 +44,23 @@ $ npm install
 ```
 
 3. Start React App
+```$ npm start```
+
+## Installation For BackEnd
+
+1. Clone this repository.
+```$ git clone https://github.com/henryluan95/henry-luan-brainflix-api.git```
+
+
+2. Run `npm install` from inside the client directory.
+
+
+```bash
+$ cd henry-luan-brainflix-api
+$ npm install
+```
+
+3. Start BackEnd App
 ```$ npm start```
 
 ## Author
