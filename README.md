@@ -2,9 +2,9 @@
 
 Brainflix is a new video streaming platform which users can watch and upload new videos. This project is an assignment that I did when I was a student at BrainStation. As per requirements, I built both frontend and backend for this assignment. The frontend ensures users getting the requested video upon chosing a video from the recommended section while the backend provides different endpoints to get, post, delete data.
 
-Please click here for the live website: https://henry-luan-brainflix.herokuapp.com/
+Please click here for the live website: https://henry-luan-brainfix.vercel.app/
 
-Note: The website takes a bit to load initially because of ✨Heroku✨
+Check out my back-end code here: https://github.com/henryluan95/henry-luan-brainflix-api
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
