@@ -7,6 +7,8 @@ import commentIcon from "../../assets/Icons/add_comment.svg";
 import { formatTimestampDeepDive } from "../../utils/timeFormat";
 import emptyprofile from "../../assets/Images/emptyprofile.svg";
 
+const PORT = "https://brainflix-api.fly.dev";
+
 //This component is the comment section of the homepage
 class Comments extends Component {
   //set state for input
@@ -40,9 +42,7 @@ class Comments extends Component {
   // Create a method to delete a comment
   deleteComment = (commentId) => {
     axios
-      .delete(
-        `https://henry-luan-brainflix-api.herokuapp.com/videos/${this.props.videoId}/comments/${commentId}`
-      )
+      .delete(`${PORT}/videos/${this.props.videoId}/comments/${commentId}`)
       .then((response) => {
         const { fetchVideo } = this.props;
         fetchVideo(this.props.videoId);
@@ -58,10 +58,7 @@ class Comments extends Component {
       comment: this.state.inputValue,
     };
 
-    this.postComment(
-      `https://henry-luan-brainflix-api.herokuapp.com/videos/${this.props.videoId}/comments`,
-      comment
-    );
+    this.postComment(`${PORT}/videos/${this.props.videoId}/comments`, comment);
   };
 
   render() {

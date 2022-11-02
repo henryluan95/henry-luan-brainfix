@@ -7,6 +7,9 @@ import axios from "axios";
 import { Loader } from "../../components/Loader/Loader";
 import AlertBox from "../../components/AlertBox/AlertBox";
 
+const PORT = "https://brainflix-api.fly.dev";
+const LOCALPORT = "http://localhost:8080";
+
 class Home extends Component {
   state = {
     selectedMovie: null,
@@ -19,7 +22,7 @@ class Home extends Component {
 
     //Get data and setState with acquired data
     axios
-      .get("https://henry-luan-brainflix-api.herokuapp.com/videos")
+      .get(`${PORT}/videos`)
       .then((response) => {
         this.setState({
           detailedVideoList: response.data,
@@ -54,7 +57,7 @@ class Home extends Component {
   //Create a method to fetch matching id video
   fetchVideo = (videoId) => {
     axios
-      .get(`https://henry-luan-brainflix-api.herokuapp.com/videos/${videoId}`)
+      .get(`${PORT}/videos/${videoId}`)
       .then((response) =>
         this.setState({
           selectedMovie: response.data,

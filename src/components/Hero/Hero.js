@@ -5,12 +5,13 @@ import "./Hero.scss";
 function Hero({ selectedMovie }) {
   return (
     <div className="hero">
-      <video
+      <img
         className="hero__video"
-        poster={selectedMovie.image}
-        src={selectedMovie.video}
-        controls
-      ></video>
+        src={selectedMovie.image}
+        // src={selectedMovie.video}
+        // controls
+        alt={selectedMovie.title}
+      />
     </div>
   );
 }

@@ -9,6 +9,8 @@ const VideoUploadPage = (props) => {
   //Change page title
   document.title = "Upload Page";
 
+  const PORT = "https://brainflix-api.fly.dev";
+
   const handleSubmit = (e) => {
     //prevent browser from refreshing
     e.preventDefault();
@@ -44,10 +46,7 @@ const VideoUploadPage = (props) => {
       };
 
       //post it to API
-      axios.post(
-        "https://henry-luan-brainflix-api.herokuapp.com/videos",
-        newVideo
-      );
+      axios.post(`${PORT}/videos`, newVideo);
 
       //Clean input fields
       e.target.title.value = "";
